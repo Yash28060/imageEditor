@@ -1,0 +1,312 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.drop-zone {
+    width: 80%;
+    height: 60vh;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 8px dashed rgb(30, 149, 192);
+    margin: auto;
+    margin-top: 10px;
+
+}
+
+.drop-zone_over {
+    border-style: solid;
+}
+
+#dropped {
+    display: none;
+}
+
+.drop-zone_thumb {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #cccccc;
+    background-size: cover;
+    position: relative;
+
+}
+
+.drop-zone_thumb::after {
+    content: attr(data-label);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    background-color: rgba(0, 0, 0, 0.75);
+
+}
+
+.logo {
+    height: 80px;
+    cursor: pointer;
+}
+
+li,
+a,
+button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    gap: 60px;
+    align-items: center;
+    padding: 20px;
+    background-color: #222225;
+    border-bottom: 2px solid white;
+}
+
+nav {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+nav li a {
+    transition: all 0.3s ease 0s;
+}
+
+nav li a:hover {
+    color: #0088a9;
+}
+#clickbtn{
+   cursor: pointer;
+}
+.button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+}
+
+.button:hover {
+    background-color: rgba(0, 136, 169, 0.5);
+
+}
+
+.editor {
+    display: flex;
+    width: 100%;
+    height: 85vh;
+    background: rgba(2, 11, 31, 0.907);
+}
+
+.toolbar {
+    width: 350px;
+    background: #eeeeee;
+}
+
+.toolbar-item {
+    padding: 15px;
+}
+
+.toolbar-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tool-input {
+    width: 100%;
+}
+input{
+    width: 85%;
+    height: 5px;
+    accent-color: #5372f0dc;
+  }
+
+.options button,
+#reset-filter {
+    padding: 9px 25px;
+    background-color: rgb(26, 27, 27);
+    border-radius: 60px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#reset-filter {
+    margin-top: 10px;
+    border-radius: 0%;
+    width: 95%;
+}
+
+.controls button {
+    font-size: 20px;
+    margin-left: 15px;
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    width: 90%;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+    
+}
+
+.options button:hover,
+#reset-filter:hover,
+.controls button:hover {
+    opacity: 0.8;
+}
+
+
+
+.image-area {
+    flex-grow: 1;
+    padding: 20px;
+    width: max-content;
+}
+
+#canvas {
+    margin-left: 10%;
+    max-width:80%;
+    height: 100%;
+    display: none;
+}
+
+.toolbar-label:hover {
+    cursor: pointer;
+}
+
+/* these are here for bottom */
+.end {
+    background-color: #24262b;
+    color: rgb(199, 198, 198);
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    word-spacing: 4px;
+    height: 2.5em;
+    padding-top: 15px;
+}
+
+.social_links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.fb,
+.twitter,
+.insta,
+.linkedin {
+    text-decoration: none;
+    background-color: rgba(125, 125, 125, 0.384);
+    border-radius: 45%;
+    padding: 10px 12px;
+    margin: 15px;
+    transition-duration: 1s;
+    animation: bouncing 0.7s ease 1s 6 alternate both;
+    position: relative;
+}
+
+.fb {
+    color: #4267B2;
+
+}
+
+.twitter {
+    color: #1DA1F2;
+}
+
+.insta {
+    color: #e060d6;
+
+}
+
+.linkedin {
+    color: #0e76a8;
+}
+
+.fb:hover,
+.insta:hover,
+.twitter:hover,
+.linkedin:hover {
+    transition-timing-function: linear;
+    border-radius: 50%;
+    zoom: 105%;
+    animation-play-state: paused;
+}
+
+@keyframes bouncing {
+    0% {
+        bottom: 0;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+        background-color: aliceblue;
+    }
+
+    100% {
+        bottom: 50px;
+        box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+        background-color: #000;
+    }
+}
+
+/* till here  */
+
+@media only screen and (max-width: 650px) {
+
+    header,
+    nav li {
+
+        padding: 0.5%;
+    }
+
+    .button,
+    .about {
+        display: none;
+    }
+
+    button {
+        padding: 0%;
+    }
+
+    .editor {
+        height: 90vh;
+        /* border-bottom: 10px solid #eeeeee; */
+    }
+
+    .end {
+        background-color: #24262b;
+        font-size: 20px;
+        height: 20vh;
+        display: grid;
+    }
+
+    .fb,
+    .insta,
+    .twitter,
+    .linkedin {
+        animation-play-state: paused;
+    }
+}

@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: flex-start;
+    gap: 60px;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid white;
+    background-color: #222225;
+}
+li,
+a,
+.button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.logo {
+    height: 80px;
+    cursor: pointer;
+}
+
+nav {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+nav li a {
+    transition: all 0.3s ease 0s;
+}
+
+nav li a:hover {
+    color: #0088a9;
+}
+
+.button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+}
+
+.button:hover {
+    background-color: rgba(0, 136, 169, 0.5);
+
+}
+.bg{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    margin: 0;
+    color: rgb(13, 14, 13);
+    background-size: 100% 100%;
+    background-image: url(/png/bg3.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-size: xx-large;
+    font-style: italic;
+    font-weight: 600;
+    height: 180vh;
+
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    flex: 0.8;
+    margin: 10px;
+    position:sticky;
+    padding: 5px;
+    transition: flex 0.8s ease-in;
+    padding-left: 2.5%;
+}
+#second{
+    top: 30%;
+    left: 80%;
+}
+#third{
+    top: 60%;
+    right: 100%;
+}
+#fourth{
+    top: 80%;
+    left: 0%;
+}
+
+.panel h3 {
+    font-size: 25px;
+    opacity: 0;
+}
+
+.panel.active {
+    
+    text-align: center;
+    flex: 4;
+}
+.panel.active h3 {
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(3),
+    .panel:nth-of-type(4) {
+        display: none;
+    }
+}

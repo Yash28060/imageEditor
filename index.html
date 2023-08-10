@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>   
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/index.js" defer></script>
+    <title>Edit_it</title>
+</head>
+<body>
+    <header>
+        <img src="/png/rec_logo.png" alt="png" class="logo">   
+    <nav>
+        <ul>
+            <li><a id="clickbtn">Click to Edit</a> </li>
+            <li><a class="about" href="about.html" target="_blank">ABOUT US</a> </li>
+            
+        </ul>
+    </nav>
+    <a class="cta" href="about.html" target="_blank"><div class="button">Contact Us</div></a>
+</header>
+    <div class="editor" id="editor">
+        <div class="toolbar">
+            <div class="toolbar-item">
+            <label class="toolbar-label" for="brightness"> Brightness</label>
+            <input  class="toolbar-label"  type="range" 
+            value ="100" id="brightness" min="0" max="200">
+         </div>
+         <div class="toolbar-item">
+            <label class="toolbar-label" for="saturation"> Saturation</label>
+            <input  class="toolbar-label"  type="range" 
+            value ="100" id="saturation" min="0" max="200">
+         </div><div class="toolbar-item">
+            <label class="toolbar-label" for="blur"> Blur</label>
+            <input  class="toolbar-label"  type="range" 
+            value ="0" id="blur" min="0" max="50">
+         </div><div class="toolbar-item">
+            <label class="toolbar-label" for="inversion"> Inversion</label>
+            <input  class="toolbar-label"  type="range" 
+            value ="0" id="inversion" min="0" max="100">
+         </div>
+         <div class="toolbar-item">
+            <label class="toolbar-label" for="grayscale"> Grayscale</label>
+            <input  class="toolbar-label"  type="range" 
+            value ="0" id="grayscale" min="0" max="100">
+          </div>
+          <div class="toolbar-item">
+            <button id="reset-filter"onclick="reset_set()">Reset Filters</button>
+         </div> 
+        <div class="controls">  
+           
+            <div class="row">                
+                    <button class="save-img" onclick="download()">Save Image</button>
+                </div>
+                
+            </div>
+         </div>
+         <div class="image-area">
+            <div class="drop-zone" id="drop-zone">
+                <span class ="drop-zone_prompt">Drop the image here or click to upload</span>
+                <input id="dropped" type="file" name="myFile" class="drop-zone_input" accept="image/png/jpg">
+            </div>      
+            <canvas id="canvas" height="500" width="500">
+            </canvas>
+        </div>
+    </div>
+    <div class="socialmedia">
+        <div class="end">
+            <div> follow us on:</div>
+            <div class="social_links">
+                <div>
+                    <a class="fb" href="https://www.facebook.com/profile.php?id=100014440417523" target="_blank">
+                        <i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                </div>
+                <div> <a class="insta" href="https://www.instagram.com/invites/contact/?i=fifrw1h5tmwr&utm_content=kiameeq" target="_blank" ><i
+                        class="fa fa-instagram " aria-hidden="true"></i></a>
+                </div>
+                <div> <a class="twitter" href="https://twitter.com/YashKum87632124?t=oufo4N8v3yjdG_pvc5ZzyA&s=08" target="_blank"><i
+                        class="fa fa-twitter-square " aria-hidden="true"></i></a>
+                </div>
+                <div> <a class="linkedin" href="https://www.linkedin.com/in/yash-saini-964341228" target="_blank"><i class="fa fa-linkedin-square " aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <ul>
+                <li>ALL RIGHTS RESERVED - @Edit_it</li>
+            </ul>
+        </div>
+       
+
+    </div>
+</body>
+</html>
+
+
